@@ -3,6 +3,10 @@ package com.springBasic.testPack;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/*<bean id="service" class="com.SpringBasic.testPack">
+ *<bean id="clientA" class="com.SpringBasic.testPack" arg ref="service"> 
+ * */
+
 @Component("client_1")
 public class ClientA implements Client {
 
