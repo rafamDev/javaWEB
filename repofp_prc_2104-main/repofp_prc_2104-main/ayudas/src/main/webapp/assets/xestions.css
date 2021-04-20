@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.cabecera {
+	background-color: LightSkyBlue;
+	align-content: center;
+	text-align: center;
+}
+
+.footer {
+	background-color: LightSkyBlue;
+	align-content: center;
+	text-align: center;
+}
+
+.menu {
+	background-color: LightBlue;
+	align-content: center;
+	text-align: center;
+}
+
+.panleft {
+	float: left;
+	width: 15%;
+}
+
+.panright {
+	float: right;
+	width: 15%;
+}
+
+.button {
+	background-color: DodgerBlue; /* #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+}
+
+.button:hover {
+	background-color: white;
+	color: black;
+}
+
+.disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
