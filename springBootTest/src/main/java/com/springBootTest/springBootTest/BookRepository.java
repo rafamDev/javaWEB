@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+//There will be just one object of this class.
 @Repository
 public class BookRepository {
 	
