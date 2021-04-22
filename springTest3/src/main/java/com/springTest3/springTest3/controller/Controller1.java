@@ -14,5 +14,12 @@ public class Controller1 {
 		model.addAttribute("message", "this is a model message");
 		return "index";
 	}
+	
+	//Http -> GET request.
+	@GetMapping("/secondPage")
+	public String getSecondPage(Model model){
+		model.addAttribute("message_2Page", "this is the second message in the same controller");
+		return "secondPage";
+   }
 
 }
