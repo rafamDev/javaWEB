@@ -11,7 +11,7 @@ public class BookRepository {
 	
 	public List<Book> findAll() {
 	    List<Book> list = new ArrayList<Book>();
-	    list.add(new Book ("1","java","Pedro"));
+	    list.add(new Book ("1","java","Manuel"));
 	    list.add(new Book ("2","python","Gema"));
 	  return list;
     }
