@@ -1,9 +1,11 @@
-package com.CRUD.customers.model;
+package com.CRUD.customers;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.springframework.stereotype.Component;
 
 @Entity
 public class Customer {
@@ -55,6 +57,11 @@ public class Customer {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + "]";
 	}
  
 }
