@@ -12,6 +12,7 @@ import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 @EnableJpaRepositories(basePackages = {"com.CRUD.customers"})
 public class JpaConfig {
 
+	//Bean object with configuration connection (Hibernate) properties.
 	@Bean
 	public LocalEntityManagerFactoryBean entityManagerFactory() {
 		LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
@@ -19,6 +20,7 @@ public class JpaConfig {
 	  return factoryBean;
 	}
 	
+	//Bean object with transaction provided by connection (Hibernate).
 	@Bean(name="transactionManager")
 	public JpaTransactionManager transationManager(EntityManagerFactory entityManagerFactory) {
 	    JpaTransactionManager transactionManager = new JpaTransactionManager();

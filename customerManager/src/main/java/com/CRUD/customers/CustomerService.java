@@ -1,6 +1,8 @@
 package com.CRUD.customers;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,5 +17,22 @@ public class CustomerService {
 	//This would be the "DAO getLit()".
 	public List<Customer> listAll(){
 		return (List<Customer>) this.repo.findAll();
+	}
+	
+	public void save(Customer customer) {
+		this.repo.save(customer);
+	}
+	
+	public Customer getById(long id) {
+		Optional<Customer> result = this.repo.findById(id);
+		return result.get();
+	}
+
+	public void delete(long id) {
+	   this.repo.deleteById(id);
+	}
+	
+	public List<Customer> search(String keyword) {
+	    return repo.search(keyword);
 	}
 }
