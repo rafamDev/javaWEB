@@ -6,25 +6,28 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-//This service sets a kind of DAO singleton object provided by a java bean based on customer pojo.  
+//This it would be the "DAO".
+//This service sets a kind of DAO singleton object based on the customer pojo.  
 @Service
 public class CustomerService {
 
-	//Set the java bean object which has all information of the table customer. 
+	//"Dao singleton repository" (java bean object).
 	@Autowired
 	public CustomerRepository repo;
 	
-	//This would be the "DAO getLit()".
+	
 	public List<Customer> listAll(){
 		return (List<Customer>) this.repo.findAll();
 	}
+	
 	
 	public void save(Customer customer) {
 		this.repo.save(customer);
 	}
 	
-	public Customer getById(long id) {
-		Optional<Customer> result = this.repo.findById(id);
+    public Customer getById(long id) {
+    	//I save the customer in a Optional (generic class) and return the selected.
+    	Optional<Customer> result = this.repo.findById(id);
 		return result.get();
 	}
 
