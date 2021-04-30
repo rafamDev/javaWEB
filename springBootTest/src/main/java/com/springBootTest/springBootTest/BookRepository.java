@@ -15,4 +15,8 @@ public class BookRepository {
 	    list.add(new Book ("2","python","Gema"));
 	  return list;
     }
+	
+	public String getMSG(){
+		return "Hello guys from index.jsp";
+	}
 }

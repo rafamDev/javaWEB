@@ -17,5 +17,9 @@ public interface CustomerRepository extends CrudRepository<Customer,Long> {
             + " OR c.email LIKE '%' || :keyword || '%'"
             + " OR c.address LIKE '%' || :keyword || '%'")
     public List<Customer> search(@Param("keyword") String keyword);
-
+	/*<form method="get" action="search">
+    <input type="text" name="keyword"/> &nbsp;
+    <input type="submit" value="Search"/>
+    </form>*/
+	
 }
