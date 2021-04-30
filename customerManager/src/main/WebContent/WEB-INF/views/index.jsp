@@ -32,7 +32,7 @@
             <td>
                 <a href="./edit?id=${customer.id}">Edit</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="./delete?id=${customer.id}">Delete</a>
+                <a href="./delete?id=${customer.id}&name=${customer.name}">Delete</a>
             </td>
         </tr>
         </c:forEach>

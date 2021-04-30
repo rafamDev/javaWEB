@@ -31,8 +31,9 @@ public class CustomerService {
 		return result.get();
 	}
 
-	public void delete(long id) {
+	public void delete(long id,String name) {
 	   this.repo.deleteById(id);
+	   System.out.println("---------- User: " + name + " has been removed. ----------");
 	}
 	
 	public List<Customer> search(String keyword) {

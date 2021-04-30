@@ -1,12 +1,9 @@
 package com.CRUD.customers;
 
 import java.util.List;
-
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
-
 //This it would be the "DAO" definition.
 //Methods(list,delete...) are extended by the parent interface.
 //This gives me the chance to have all methods needed to build a "DAO singleton object" based on the customer pojo.
@@ -21,5 +18,6 @@ public interface CustomerRepository extends CrudRepository<Customer,Long> {
     <input type="text" name="keyword"/> &nbsp;
     <input type="submit" value="Search"/>
     </form>*/
+	//Annotation in query is @Param. 
 	
 }

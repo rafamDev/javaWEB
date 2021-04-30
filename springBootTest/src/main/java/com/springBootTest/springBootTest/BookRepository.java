@@ -19,4 +19,8 @@ public class BookRepository {
 	public String getMSG(){
 		return "Hello guys from index.jsp";
 	}
+	
+	public String getBestBook(){
+		return "JavaBook";
+	}
 }
