@@ -5,22 +5,23 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-//There will be just one object of this class.
 @Repository
-public class BookRepository {
+public class BookRepository{
+	
+	private Book theBest = new Book("1","java","Manuel");
 	
 	public List<Book> findAll() {
 	    List<Book> list = new ArrayList<Book>();
-	    list.add(new Book ("1","java","Manuel"));
+	    list.add(this.theBest);
 	    list.add(new Book ("2","python","Gema"));
 	  return list;
     }
 	
-	public String getMSG(){
-		return "Hello guys from index.jsp";
+	public String getNameOfBestBook(){
+		return this.theBest.getName().toString();
 	}
 	
-	public String getBestBook(){
-		return "JavaBook";
+	public Book getBestBook(){
+		return this.theBest;
 	}
 }

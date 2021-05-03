@@ -15,7 +15,8 @@ public class CustomerControllerCRUD {
 	//Annotations on parameters such as @RequestParam or @ModelAttribute("customer") are descriptive but not functional.
 	//@RequestParam is to define the action of controller.
 	
-	//"Dao singleton service" (java bean object).
+	//"Dao singleton Service" (java bean object).
+	//Dependency injection.
 	@Autowired
 	private CustomerService customerService;
 	

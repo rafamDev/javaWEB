@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class CustomerService {
 
 	//"Dao singleton repository" (java bean object).
+	//Dependency injection.
 	@Autowired
 	public CustomerRepository repo;
 	
@@ -26,7 +27,7 @@ public class CustomerService {
 	}
 	
     public Customer getById(long id) {
-    	//I save the customer in a Optional (generic class) and return the selected.
+    	//I save the customer in a Optional (container object) and return the selected.
     	Optional<Customer> result = this.repo.findById(id);
 		return result.get();
 	}
