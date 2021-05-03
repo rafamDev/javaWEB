@@ -10,7 +10,7 @@
 <body>
    <div align="center">
         <h2>New Customer</h2>
-        <form:form action="save" method="post" modelAttribute="customer">
+        <form:form action="save" method="post" modelAttribute="customer" >
             <table border="0" cellpadding="5">
                 <tr>
                     <td>Name: </td>
@@ -28,7 +28,7 @@
                     <td colspan="2"><input type="submit" value="Save"></td>
                 </tr>                    
             </table>
-        </form:form>
+        </form:form> 
     </div>
 </body>
 </html>

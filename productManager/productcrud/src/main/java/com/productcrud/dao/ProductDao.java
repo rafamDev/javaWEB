@@ -2,6 +2,7 @@ package com.productcrud.dao;
 
 import java.util.List;
 
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class ProductDao {
 	private HibernateTemplate hibernateTemplate;
 
 	// create
-	@Transactional
+	@Transactional //(session factory)
 	public void createProduct(Product product) {
 
 		this.hibernateTemplate.save(product);
@@ -30,7 +31,7 @@ public class ProductDao {
 	}
 
 	// delete the single product
-	@Transactional
+	@Transactional //(session factory)
 	public void deleteProduct(int pid) {
 		Product p = this.hibernateTemplate.load(Product.class, pid);
 		this.hibernateTemplate.delete(p);

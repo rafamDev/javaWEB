@@ -43,4 +43,5 @@ public class BookRestService {
 		return repository.getBestBook();
 		//This returns a json file (thanks to jackson library) which should be handled.
 	 }
+ 
 }
