@@ -1,0 +1,1 @@
+INSERT INTO employee VALUES(2,"ppLopez@gmail.com","Pedro","Lopez");
