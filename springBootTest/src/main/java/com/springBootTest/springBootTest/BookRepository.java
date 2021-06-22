@@ -5,9 +5,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+//In this class we would call to persistence methods.
 @Repository
 public class BookRepository{
-	
+
 	private Book theBest = new Book("1","java","Manuel");
 	
 	public List<Book> findAll() {
