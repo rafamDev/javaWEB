@@ -1,5 +1,6 @@
-<h1>List of employees</h1>
+<h2>Employee List</h2><br>
 <table class="table table-striped">
+   
    <thead>
        <th>ID</th>
        <th>FIRSTNAME</th>
@@ -8,8 +9,12 @@
    </thead>
    <tbody>
        <tr *ngFor="let employee of employees"> 
+           <th>{{ employee.id }}</th>
            <td>{{ employee.firstName }}</td>
+           <td>{{ employee.lastName }}</td>
+           <td>{{ employee.emailId }}</td>
        </tr>
    </tbody>
+
 
 </table>
