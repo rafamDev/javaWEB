@@ -6,6 +6,7 @@
        <th>FIRSTNAME</th>
        <th>LASTNAME</th>
        <th>EMAIL</th>
+       <th>ACTIONS</th>
    </thead>
    <tbody>
        <tr *ngFor="let employee of employees"> 
@@ -13,6 +14,9 @@
            <td>{{ employee.firstName }}</td>
            <td>{{ employee.lastName }}</td>
            <td>{{ employee.emailId }}</td>
+           <td>
+               <button (click) = "updateEmployee(employee.id)" class="btn btn-success">Update</button>
+           </td>
        </tr>
    </tbody>
 

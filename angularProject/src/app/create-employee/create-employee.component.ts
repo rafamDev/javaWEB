@@ -19,11 +19,10 @@ export class CreateEmployeeComponent implements OnInit {
 
   saveEmployee(){
       this.employeeService.createEmployee(this.employee).subscribe( data =>{
-         console.log("The value of data is ---> " + data);
          //Redirect
          this.goToEmployeeList();
       },
-      error => console.log(error));
+    error => console.log(error));
   }
 
   goToEmployeeList(){
@@ -31,7 +30,6 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.employee);
     this.saveEmployee();
   }
 
