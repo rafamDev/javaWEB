@@ -8,7 +8,6 @@ public class AngularProjectSbApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AngularProjectSbApplication.class, args);
-		
 	}
 
 }

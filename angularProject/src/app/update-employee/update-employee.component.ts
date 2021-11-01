@@ -28,12 +28,11 @@ export class UpdateEmployeeComponent implements OnInit {
   }
 
   updateEmployee(){
-    this.employeeService.updateEmployee(this.id, this.employee).subscribe(data=>{
+    this.employeeService.updateEmployee(this.id, this.employee).subscribe(data => {
       console.log(data);
       this.employee = new Employee();
       this.goToEmployeeList();
     }, error => console.log(error));
-    
   }
 
   goToEmployeeList(){
@@ -41,7 +40,10 @@ export class UpdateEmployeeComponent implements OnInit {
   }
 
   onSubmit(){
-    this.updateEmployee();
-}
+    this.employeeService.updateEmployee(this.id,this.employee).subscribe(data => {
+      this.goToEmployeeList();
+    }
+    ,error => console.log(error));
+  }
 
 }
